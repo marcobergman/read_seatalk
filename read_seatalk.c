@@ -12,6 +12,11 @@
    Reads bytes from ttyAMA0 and presents in hex, in lines on standard output.
    Each line starts with the byte that has the 9th bit set.
    The 9th bit is in the position of the parity bit.
+   
+   Example:
+   	root@openplotter:~# ./read_seatalk
+	0x86 0x11 0x1 0xfe
+	0x86 0x11 0x1 0xfe
 
    Normally, you cannot read 9 bits, but many UARTs have a trick for that.
    The trick is first to enable input parity checking (INPCK).  If enabled, this will

@@ -114,7 +114,9 @@ int main()
 					p++;rdlen--;
 				} 
                         }
-                        printf("0x%x ", *p);
+			if (rdlen >= 0) {
+				printf("0x%x ", *p);
+			}
                 }
         } else if (rdlen < 0) {
                 printf("Error from read: %d: %s\n", rdlen, strerror(errno));

@@ -17,6 +17,7 @@
    	root@openplotter:~# ./read_seatalk
 	0x86 0x11 0x1 0xfe
 	0x86 0x11 0x2 0xfd
+	0x86 0x11 0x28 0xd7
 
    Normally, you cannot read 9 bits, but many UARTs have a trick for that.
    The trick is first to enable input parity checking (INPCK).  If enabled, this will

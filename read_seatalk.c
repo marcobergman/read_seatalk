@@ -107,9 +107,12 @@ int main()
                         if (*p == 0xFF) {
                                 p++;rdlen--;
                                 if (*p == 0x00) {
-                                        p++;rdlen--;
                                         printf ("\n");
-                                }
+                                        p++;rdlen--;
+                                } else if (*p == 0xFF) {
+					printf ("0x%x ", *p);
+					p++;rdlen--;
+				} 
                         }
                         printf("0x%x ", *p);
                 }

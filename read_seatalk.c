@@ -25,11 +25,11 @@
    Therefore, we set PARMRK.  This inserts 0xFF 0x00 sequences before the byte with the 9th
    bit set, and that we can recognise.  Finally, we need to tell the UART that the parity bit
    is not calculated based on the other bits, but that it is fixed.  This is done by setting
-   the elusive 'stick' parity with the flag constant CMSPAR.  Now we get 0xFF 0x00 sequences
+   the elusive 'stick parity' with the flag constant CMSPAR.  Now we get 0xFF 0x00 sequences
    in our data stream preceding a new seatalk command.  The rest is trivial.
 
    This CMSPAR mechanism is not always available.  FTDI chips ('serial-to-USB') are known not 
-   to have this 'stick bit' facility, and also in raspberries <= 2016 this was not compiled 
+   to have this 'stick parity' facility, and also in raspberries <= 2016 this was not compiled 
    into the kernel.  But from Raspberry 3+ onwards, this mechanism seems to work with the 
    built-in /dev/ttyAMA0.
 

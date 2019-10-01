@@ -37,6 +37,7 @@
    Documentation is in the linux man pages for TERMIOS(3).
         http://man7.org/linux/man-pages/man3/termios.3.html
         https://www.raspberrypi.org/forums/viewtopic.php?t=25516
+	https://stackoverflow.com/questions/46914406/mark-parity-detection-with-cmspar-very-unreliable-9-bit-uart
 
    Other options would have been do write directly into the UART's Line Control Register,
         https://www.lammertbies.nl/comm/info/serial-uart.html#LCR

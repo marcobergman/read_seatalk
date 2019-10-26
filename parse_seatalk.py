@@ -57,3 +57,12 @@ while 1:
 	x = ((U2 // 16) & ord('\x03')) * 90 + (VW & ord('\x3f')) * 2 + ((U2 // 16 // 8) & ord('\x0c'))
 	print "===> HDG = " + str(x) + "           " + line
 
+    if datagram == ord('\x9c'):
+	U2 = getByte(bytes[1])
+	VW = getByte(bytes[2])
+	XY = getByte(bytes[3])
+#	2Z = getByte(bytes[4])
+
+	x = ((U2 // 16) & ord('\x03')) * 90 + (VW & ord('\x3f')) * 2 + ((U2 // 16 // 8) & ord('\x0c'))
+	print "===> HDG2 = " + str(x) + "           " + line
+
